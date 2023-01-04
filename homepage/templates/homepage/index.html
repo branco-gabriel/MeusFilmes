@@ -1,13 +1,24 @@
 {% extends 'base.html'%}
 
 {%block conteudo%}
-<tbody>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Filme</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Resenha</th>
+    </tr>
+  </thead>
+  <tbody>
     {% for filme in filmes %}
-      <tr>
-        <td>{{ filme.id }}</td>
-        <td>{{ filme.filme }}</td>
-        <td>{{filme.categoria }}</td>
-      </tr>
-    {% endfor %}
-</tbody>
+    <tr>
+        <td>{{filme.id}}</td>
+        <td>{{filme.filme}}</td>
+        <td>{{filme.categoria}}</td>
+        <td>{{filme.resenha}}</td>
+      {%endfor%}
+    </tr>
+  </tbody>
+</table>
 {%endblock%}
