@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block conteudo%}
+ <h1 class="mt-5">{{ filme.filme }}</h1>
+    <dl>
+        <dt>ID</dt>
+        <dd>{{ filme.id }}</dd>
+
+        <dd>{{ filme.data_criacao|date:'d/m/Y' }}</dd>
+
+        <dt>Categoria</dt>
+        <dd>{{ filme.categoria }}</dd>
+
+        <dt>Descrição</dt>
+        <dd>{{ filme.resenha }}</dd>
+    </dl>
+{%endblock%}

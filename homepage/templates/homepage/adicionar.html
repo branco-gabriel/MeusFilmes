@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Adicionar Filme{% endblock %}
+{% block conteudo %}
+    <div class="container">
+        <h1>Adicionar um Filme</h1>
+        <div>
+            <form action="." method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-default" value="Adicionar">
+            </form>
+            
+        </div>
+    </div>
+{% endblock %}
